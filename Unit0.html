@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Algebra Review: Combining Like Terms</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="antialiased bg-slate-50 text-slate-700">
+
+    <style>
+        .vocab-card-inner.is-flipped {
+            transform: rotateY(180deg);
+        }
+    </style>
+
+    <header class="bg-slate-800 text-white py-6 shadow-lg">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl md:text-4xl font-bold">Interactive Algebra Review</h1>
+            <p class="text-slate-300 mt-1">Day 1: Combining Like Terms</p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 md:py-12">
+
+        <!-- Section 1: The Building Blocks -->
+        <section id="vocabulary" class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-2">The Building Blocks of Expressions</h2>
+            <p class="text-center text-slate-500 mb-8 max-w-2xl mx-auto">Before we simplify, we need to know the parts of an expression. Click on each card to flip it over and reveal the definition.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Vocab Card 1 -->
+                <div class="vocab-card">
+                    <div class="vocab-card-inner relative w-full h-48 rounded-lg shadow-md" style="transition: transform 0.6s; transform-style: preserve-3d;">
+                        <div class="vocab-card-front absolute w-full h-full bg-white flex items-center justify-center p-4 cursor-pointer border-2 border-slate-200 rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                            <h3 class="text-2xl font-semibold text-sky-600">Term</h3>
+                        </div>
+                        <div class="vocab-card-back absolute w-full h-full bg-sky-600 text-white flex flex-col items-center justify-center p-4 cursor-pointer rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="text-xl font-bold mb-2">Term</h3>
+                            <p class="text-center text-sky-100">A single number, variable, or product of numbers and variables. Terms are separated by + or - signs.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vocab Card 2 -->
+                <div class="vocab-card">
+                     <div class="vocab-card-inner relative w-full h-48 rounded-lg shadow-md" style="transition: transform 0.6s; transform-style: preserve-3d;">
+                        <div class="vocab-card-front absolute w-full h-full bg-white flex items-center justify-center p-4 cursor-pointer border-2 border-slate-200 rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                            <h3 class="text-2xl font-semibold text-sky-600">Coefficient</h3>
+                        </div>
+                        <div class="vocab-card-back absolute w-full h-full bg-sky-600 text-white flex flex-col items-center justify-center p-4 cursor-pointer rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="text-xl font-bold mb-2">Coefficient</h3>
+                            <p class="text-center text-sky-100">The numerical part of a term that contains a variable. In 5x², the coefficient is 5.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vocab Card 3 -->
+                <div class="vocab-card">
+                     <div class="vocab-card-inner relative w-full h-48 rounded-lg shadow-md" style="transition: transform 0.6s; transform-style: preserve-3d;">
+                        <div class="vocab-card-front absolute w-full h-full bg-white flex items-center justify-center p-4 cursor-pointer border-2 border-slate-200 rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                            <h3 class="text-2xl font-semibold text-sky-600">Constant</h3>
+                        </div>
+                        <div class="vocab-card-back absolute w-full h-full bg-sky-600 text-white flex flex-col items-center justify-center p-4 cursor-pointer rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="text-xl font-bold mb-2">Constant</h3>
+                            <p class="text-center text-sky-100">A term without a variable. Its value never changes. In 3x - 8, the constant is -8.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vocab Card 4 -->
+                <div class="vocab-card">
+                     <div class="vocab-card-inner relative w-full h-48 rounded-lg shadow-md" style="transition: transform 0.6s; transform-style: preserve-3d;">
+                        <div class="vocab-card-front absolute w-full h-full bg-white flex items-center justify-center p-4 cursor-pointer border-2 border-slate-200 rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden;">
+                            <h3 class="text-2xl font-semibold text-sky-600">Like Terms</h3>
+                        </div>
+                        <div class="vocab-card-back absolute w-full h-full bg-sky-600 text-white flex flex-col items-center justify-center p-4 cursor-pointer rounded-lg" style="backface-visibility: hidden; -webkit-backface-visibility: hidden; transform: rotateY(180deg);">
+                            <h3 class="text-xl font-bold mb-2">Like Terms</h3>
+                            <p class="text-center text-sky-100">Terms with the same variable(s) raised to the same power. 7x and -2x are like terms. 4y² and y² are like terms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Identifying Like Terms -->
+        <section id="identifying" class="mb-12 bg-white p-6 rounded-lg shadow-md">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-2">Spot the Like Terms</h2>
+            <p class="text-center text-slate-500 mb-8 max-w-2xl mx-auto">Click on any term in the expression below. All of its "like terms" will be highlighted in the same color. Try clicking on different terms!</p>
+            <div id="highlight-container" class="text-center text-2xl md:text-3xl font-mono p-6 bg-slate-100 rounded-lg">
+                <span class="term-highlight cursor-pointer" data-group="1" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">4x²</span>
+                <span class="term-highlight" data-group="0">+</span>
+                <span class="term-highlight cursor-pointer" data-group="2" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">7</span>
+                <span class="term-highlight cursor-pointer" data-group="3" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">-2x</span>
+                <span class="term-highlight" data-group="0">+</span>
+                <span class="term-highlight cursor-pointer" data-group="4" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">5y</span>
+                <span class="term-highlight cursor-pointer" data-group="1" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">-x²</span>
+                <span class="term-highlight cursor-pointer" data-group="2" style="transition: all 0.2s ease-in-out; border-bottom: 2px dotted transparent;">-6</span>
+            </div>
+        </section>
+
+        <!-- Section 3: Practice Arena -->
+        <section id="practice-arena">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-2">Practice Arena</h2>
+            <p class="text-center text-slate-500 mb-8 max-w-2xl mx-auto">Choose your level. If you need a refresher, start with Reteach. If you're feeling confident, jump into Practice or try the Extension for a challenge.</p>
+            
+            <div class="flex justify-center mb-6 border-b border-slate-300">
+                <button class="station-tab py-2 px-6 font-semibold text-slate-600 rounded-t-lg active" data-station="reteach" style="transition: all 0.2s;">Reteach</button>
+                <button class="station-tab py-2 px-6 font-semibold text-slate-600 rounded-t-lg" data-station="practice" style="transition: all 0.2s;">Practice</button>
+                <button class="station-tab py-2 px-6 font-semibold text-slate-600 rounded-t-lg" data-station="extension" style="transition: all 0.2s;">Extension</button>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow-md min-h-[400px]">
+                <!-- Reteach Station -->
+                <div id="station-reteach" class="station-content">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Term Sorting Challenge</h3>
+                    <p class="text-slate-500 mb-6">Drag each term from the bank into the correct category box below. This will help you get used to identifying different types of terms.</p>
+                    <div id="term-bank" class="flex flex-wrap gap-4 p-4 bg-slate-100 rounded-lg mb-6 justify-center">
+                    </div>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div id="drop-x2" class="drop-zone p-4 rounded-lg min-h-[100px]" style="transition: background-color 0.2s; border: 2px dashed #94a3b8;">
+                            <h4 class="font-semibold text-center text-slate-700 mb-2">x² Terms</h4>
+                        </div>
+                        <div id="drop-x" class="drop-zone p-4 rounded-lg min-h-[100px]" style="transition: background-color 0.2s; border: 2px dashed #94a3b8;">
+                            <h4 class="font-semibold text-center text-slate-700 mb-2">x Terms</h4>
+                        </div>
+                        <div id="drop-const" class="drop-zone p-4 rounded-lg min-h-[100px]" style="transition: background-color 0.2s; border: 2px dashed #94a3b8;">
+                            <h4 class="font-semibold text-center text-slate-700 mb-2">Constants</h4>
+                        </div>
+                    </div>
+                     <div id="reteach-feedback" class="mt-4 text-center font-semibold opacity-0" style="transition: opacity 0.5s;"></div>
+                </div>
+
+                <!-- Practice Station -->
+                <div id="station-practice" class="station-content hidden">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Simplify the Expression</h3>
+                    <p class="text-slate-500 mb-6">Combine the like terms and type your simplified answer in the box. Don't use spaces in your answer.</p>
+                    <div class="bg-slate-100 p-6 rounded-lg text-center mb-4">
+                        <p id="practice-problem" class="text-2xl font-mono"></p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                        <input type="text" id="practice-answer" class="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg" placeholder="e.g., 5x^2+3x-10">
+                        <button id="check-practice-btn" class="bg-sky-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-600 transition-colors">Check Answer</button>
+                    </div>
+                    <div id="practice-feedback" class="mt-4 text-center font-semibold opacity-0" style="transition: opacity 0.5s;"></div>
+                </div>
+
+                <!-- Extension Station -->
+                <div id="station-extension" class="station-content hidden">
+                    <h3 class="text-xl font-bold text-slate-800 mb-2">Expression Puzzles</h3>
+                    <p class="text-slate-500 mb-6">Time for a challenge! Solve the puzzle to find the missing value or expression.</p>
+                     <div class="bg-slate-100 p-6 rounded-lg text-center mb-4">
+                        <p id="extension-problem" class="text-xl font-mono"></p>
+                    </div>
+                    <div class="flex flex-col sm:flex-row gap-2 justify-center">
+                        <input type="text" id="extension-answer" class="w-full sm:w-1/2 p-2 border border-slate-300 rounded-lg" placeholder="Type your answer here">
+                        <button id="check-extension-btn" class="bg-sky-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-sky-600 transition-colors">Check Answer</button>
+                    </div>
+                    <div id="extension-feedback" class="mt-4 text-center font-semibold opacity-0" style="transition: opacity 0.5s;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-slate-800 text-white py-4 mt-12">
+        <div class="container mx-auto px-4 text-center text-slate-400">
+            <p>Keep practicing! Algebra is a foundational skill for geometry and beyond.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Re-creating dynamic styles from the original <style> block
+            const vocabCards = document.querySelectorAll('.vocab-card');
+            const termHighlights = document.querySelectorAll('.term-highlight');
+            const dropZones = document.querySelectorAll('.drop-zone');
+            const stationTabs = document.querySelectorAll('.station-tab');
+            const stationContents = document.querySelectorAll('.station-content');
+
+            // --- Vocabulary Card Logic ---
+            vocabCards.forEach(card => {
+                const inner = card.querySelector('.vocab-card-inner');
+                // The click event is all that's needed for the flip.
+                card.addEventListener('click', () => {
+                    inner.classList.toggle('is-flipped');
+                });
+            });
+
+            // --- Highlighting Like Terms Logic ---
+            const highlightContainer = document.getElementById('highlight-container');
+            const terms = highlightContainer.querySelectorAll('.term-highlight');
+            const termColors = [
+                'bg-sky-200 border-sky-400',
+                'bg-red-200 border-red-400',
+                'bg-green-200 border-green-400',
+                'bg-orange-200 border-orange-400'
+            ];
+            const termHoverStyle = 'background-color: #e0f2fe;';
+            const termBaseStyle = 'transition: all 0.2s ease-in-out; cursor: pointer; border-bottom: 2px dotted transparent;';
+
+            terms.forEach(term => {
+                // Apply base styles
+                term.style = termBaseStyle;
+                term.addEventListener('mouseenter', () => {
+                    if (term.dataset.group !== '0') {
+                        term.style.backgroundColor = '#e0f2fe';
+                    }
+                });
+                term.addEventListener('mouseleave', () => {
+                    if (term.dataset.group !== '0') {
+                        // Check if it has a color class before removing the background color
+                        let hasColorClass = false;
+                        termColors.forEach(c => {
+                            // Check if any of the classes in the string are present
+                            if (c.split(' ').some(cls => term.classList.contains(cls))) {
+                                hasColorClass = true;
+                            }
+                        });
+                        if (!hasColorClass) {
+                            term.style.backgroundColor = '';
+                        }
+                    }
+                });
+                term.addEventListener('click', () => {
+                    const group = term.dataset.group;
+                    if (group === '0') return; // Don't highlight operators
+
+                    // Split the classes string into an array to add/remove them individually
+                    const groupClasses = termColors[group-1].split(' ');
+                    const isAlreadyActive = groupClasses.every(cls => term.classList.contains(cls));
+
+                    // Reset all terms to their default state
+                    terms.forEach(t => {
+                        termColors.forEach(c => {
+                            const classesToRemove = c.split(' ');
+                            t.classList.remove(...classesToRemove);
+                        });
+                        t.classList.remove('border-2');
+                        t.style.backgroundColor = '';
+                    });
+
+                    // If the clicked group was not already active, highlight it
+                    if (!isAlreadyActive) {
+                        terms.forEach(t => {
+                            if (t.dataset.group === group) {
+                                t.classList.add(...groupClasses, 'border-2');
+                                t.style.backgroundColor = ''; // Let Tailwind classes handle the background
+                            }
+                        });
+                    }
+                });
+            });
+
+            // --- Station Tabs Logic ---
+            stationTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    stationTabs.forEach(t => {
+                        t.classList.remove('active');
+                        t.style.backgroundColor = '';
+                        t.style.color = '#475569'; // slate-600
+                        t.style.boxShadow = 'none';
+                    });
+                    tab.classList.add('active');
+                    tab.style.backgroundColor = '#0ea5e9'; // sky-500
+                    tab.style.color = 'white';
+                    tab.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)';
+
+                    const station = tab.dataset.station;
+                    stationContents.forEach(content => {
+                        if (content.id === `station-${station}`) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // --- Reteach Station Logic ---
+            const reteachTerms = [
+                { text: '8x', group: 'x' },
+                { text: '-5x²', group: 'x2' },
+                { text: '2y', group: 'other' }, // Not a drop target
+                { text: '4', group: 'const' },
+                { text: '-7', group: 'const' },
+                { text: '3x²', group: 'x2' },
+                { text: '-x', group: 'x' }
+            ];
+            const termBank = document.getElementById('term-bank');
+            const reteachDropZones = document.querySelectorAll('.drop-zone');
+            const reteachFeedback = document.getElementById('reteach-feedback');
+            let correctDrops = 0;
+
+            function setupReteach() {
+                correctDrops = 0;
+                termBank.innerHTML = '';
+                reteachDropZones.forEach(dz => {
+                    const title = dz.querySelector('h4');
+                    dz.innerHTML = '';
+                    dz.appendChild(title);
+                });
+                reteachFeedback.classList.add('opacity-0');
+
+                reteachTerms.forEach(term => {
+                    const termEl = document.createElement('div');
+                    termEl.textContent = term.text;
+                    termEl.draggable = true;
+                    termEl.dataset.group = term.group;
+                    termEl.id = `term-${term.text}`;
+                    termEl.className = 'draggable bg-white p-2 rounded-md shadow font-mono';
+                    termEl.style.touchAction = 'none';
+                    termEl.style.cursor = 'grab';
+                    termBank.appendChild(termEl);
+                    termEl.addEventListener('dragstart', dragStart);
+                });
+            }
+
+            function dragStart(e) {
+                e.dataTransfer.setData('text/plain', e.target.id);
+            }
+
+            reteachDropZones.forEach(zone => {
+                zone.addEventListener('dragover', dragOver);
+                zone.addEventListener('dragleave', dragLeave);
+                zone.addEventListener('drop', drop);
+            });
+
+            function dragOver(e) {
+                e.preventDefault();
+                this.style.backgroundColor = '#dbeafe'; // blue-200
+            }
+            
+            function dragLeave(e) {
+                this.style.backgroundColor = '';
+            }
+
+            function drop(e) {
+                e.preventDefault();
+                this.style.backgroundColor = '';
+                const id = e.dataTransfer.getData('text/plain');
+                const draggable = document.getElementById(id);
+                const dropZoneId = this.id.split('-')[1];
+
+                if (draggable.dataset.group === dropZoneId) {
+                    this.appendChild(draggable);
+                    draggable.draggable = false;
+                    draggable.style.cursor = 'default';
+                    correctDrops++;
+                    if (correctDrops === reteachTerms.filter(t => t.group !== 'other').length) {
+                        reteachFeedback.textContent = 'Great job! All terms are sorted correctly!';
+                        reteachFeedback.className = 'mt-4 text-center font-semibold text-green-600 opacity-100';
+                        setTimeout(setupReteach, 3000);
+                    }
+                } else {
+                    reteachFeedback.textContent = `Whoops! "${draggable.textContent}" doesn't belong there. Try again.`;
+                    reteachFeedback.className = 'mt-4 text-center font-semibold text-red-600 opacity-100';
+                    setTimeout(() => reteachFeedback.classList.add('opacity-0'), 2000);
+                }
+            }
+
+
+            // --- Practice Station Logic ---
+            const practiceProblems = [
+                { problem: "3a² + 5 - a²", answer: "2a^2+5" },
+                { problem: "-2x³ + 6 - 5x³ + 3", answer: "-7x^3+9" },
+                { problem: "4(y - 2) + 7y", answer: "11y-8" },
+                { problem: "-(c² + 3) + 5c²", answer: "4c^2-3" }
+            ];
+            let currentPracticeProblem = 0;
+            const practiceProblemEl = document.getElementById('practice-problem');
+            const practiceAnswerEl = document.getElementById('practice-answer');
+            const checkPracticeBtn = document.getElementById('check-practice-btn');
+            const practiceFeedbackEl = document.getElementById('practice-feedback');
+
+            function loadPracticeProblem() {
+                practiceProblemEl.textContent = practiceProblems[currentPracticeProblem].problem;
+                practiceAnswerEl.value = '';
+                practiceFeedbackEl.classList.add('opacity-0');
+            }
+
+            checkPracticeBtn.addEventListener('click', () => {
+                const userAnswer = practiceAnswerEl.value.replace(/\s/g, '').toLowerCase();
+                const correctAnswer = practiceProblems[currentPracticeProblem].answer.replace(/\s/g, '').toLowerCase();
+                
+                if (userAnswer === correctAnswer) {
+                    practiceFeedbackEl.textContent = "Correct! Well done!";
+                    practiceFeedbackEl.className = 'mt-4 text-center font-semibold text-green-600 opacity-100';
+                    currentPracticeProblem = (currentPracticeProblem + 1) % practiceProblems.length;
+                    setTimeout(loadPracticeProblem, 1500);
+                } else {
+                    practiceFeedbackEl.textContent = "Not quite. Check your signs and exponents, then try again!";
+                    practiceFeedbackEl.className = 'mt-4 text-center font-semibold text-red-600 opacity-100';
+                }
+            });
+            
+            // --- Extension Station Logic ---
+            const extensionProblems = [
+                { problem: "3x² + ▢ - 2x² + 5 = x² + 9. What is the missing term?", answer: "4" },
+                { problem: "4(y³ + ▢) + 3y³ = 7y³ + 16. What is the missing value?", answer: "4" },
+                { problem: "Find the perimeter of a rectangle with length (5x - 2) and width (3x + 1).", answer: "16x-2" }
+            ];
+            let currentExtensionProblem = 0;
+            const extensionProblemEl = document.getElementById('extension-problem');
+            const extensionAnswerEl = document.getElementById('extension-answer');
+            const checkExtensionBtn = document.getElementById('check-extension-btn');
+            const extensionFeedbackEl = document.getElementById('extension-feedback');
+
+            function loadExtensionProblem() {
+                extensionProblemEl.textContent = extensionProblems[currentExtensionProblem].problem;
+                extensionAnswerEl.value = '';
+                extensionFeedbackEl.classList.add('opacity-0');
+            }
+
+            checkExtensionBtn.addEventListener('click', () => {
+                const userAnswer = extensionAnswerEl.value.replace(/\s/g, '').toLowerCase();
+                const correctAnswer = extensionProblems[currentExtensionProblem].answer.replace(/\s/g, '').toLowerCase();
+
+                if (userAnswer === correctAnswer) {
+                    extensionFeedbackEl.textContent = "Excellent! You solved the puzzle!";
+                    extensionFeedbackEl.className = 'mt-4 text-center font-semibold text-green-600 opacity-100';
+                    currentExtensionProblem = (currentExtensionProblem + 1) % extensionProblems.length;
+                    setTimeout(loadExtensionProblem, 1500);
+                } else {
+                    extensionFeedbackEl.textContent = "That's a tricky one. Give it another thought!";
+                    extensionFeedbackEl.className = 'mt-4 text-center font-semibold text-red-600 opacity-100';
+                }
+            });
+
+            // Initial Load
+            setupReteach();
+            loadPracticeProblem();
+            loadExtensionProblem();
+        });
+    </script>
+</body>
+</html>
